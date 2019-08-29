@@ -55,12 +55,24 @@
 	animation: pulse 1s ease-in-out 0.5s infinite;
 }
 
-.wrap .col .angeed{
+.wrap .col .angeed, .wrap .col .angeed .slide{
 	width: 300px;
 	height: 400px;
 	margin: auto;
 	outline: 2px solid black;
 	display: flex;
+
+	position: relative;
+
+	transition: 1s;
+}
+
+.wrap .col .angeed .slide{
+	position: absolute;
+	outline: none;
+	background: yellow;
+	display: block;
+	z-index: -1;
 }
 
 .wrap .col .angeed .control{
