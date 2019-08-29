@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+*{
+	margin:0;
+	padding:0;
+	text-decoration:none;
+	color:inherit;
+	font-family: 'VT323', monospace;
+}
+
+.wrap{
+	width: 90%;
+	margin: auto;
+}
+
+.wrap .col{
+	margin: 20px auto;
+}
+
+.wrap .col .logo, .wrap .col .logo::before{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	margin: auto;
+
+	background-image: url('res/logo.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.wrap .col .title{
+	width: 100%;
+	text-align: center;
+	font-size: 30px;
+}
+
+.wrap .col .button{
+	width: 120px;
+	padding: 10px 5px;
+	margin: 10px auto;
+	display: block;
+	text-align: center;
+	font-size: 25px;
+	color: whitesmoke;
+	background: #c70600;
+}
+
+.wrap .col .logo::before{
+	position: absolute;
+	content: ' ';
+	
+	z-index: -1;
+
+	background-image: url('res/logoback.png');
+	animation: pulse 1s ease-in-out 0.5s infinite;
+}
+
+.wrap .col .angeed{
+	width: 300px;
+	height: 400px;
+	margin: auto;
+	outline: 2px solid black;
+	display: flex;
+}
+
+.wrap .col .angeed .control{
+	width: 50%;
+	height: 400px;
+	outline: 2px solid red;
+}
+
+
+@media screen and (min-width: 500px) {
+
+}
+
+@keyframes pulse{
+	0%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.05);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
