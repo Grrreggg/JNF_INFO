@@ -27,13 +27,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById('slide_1_0'),
         document.getElementById('slide_1_1'),
         document.getElementById('slide_1_2'), 
-        document.getElementById('slide_1_3'),   
     ];
     group_2 = [
         document.getElementById('slide_2_0'),
         document.getElementById('slide_2_1'),
         document.getElementById('slide_2_2'),  
-        document.getElementById('slide_2_3'),  
     ];
     control.forEach(function(item) {
         item.element.addEventListener('click', on_control_click, ['ass']);

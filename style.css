@@ -7,6 +7,12 @@
 	font-family: 'VT323', monospace;
 }
 
+body{
+	background-image: url('res/noize.gif');
+	background-color: rgba(0, 0, 0, 0.9);
+	background-blend-mode: overlay;
+}
+
 .wrap{
 	width: 90%;
 	margin: auto;
@@ -32,6 +38,7 @@
 	width: 100%;
 	text-align: center;
 	font-size: 30px;
+	color: white;
 }
 
 .wrap .col .button{
@@ -41,7 +48,7 @@
 	display: block;
 	text-align: center;
 	font-size: 25px;
-	color: whitesmoke;
+	color: black;
 	background: #c70600;
 }
 
@@ -57,33 +64,103 @@
 
 .wrap .col .angeed, .wrap .col .angeed .slide{
 	width: 300px;
-	height: 400px;
+	height: 500px;
 	margin: auto;
-	outline: 2px solid black;
 	display: flex;
 
 	position: relative;
 
-	transition: 1s;
+	transition: 0.5s;
 }
 
 .wrap .col .angeed .slide{
 	position: absolute;
 	outline: none;
-	background: yellow;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	display: block;
 	z-index: -1;
 }
 
-.wrap .col .angeed .control{
-	width: 50%;
-	height: 400px;
-	outline: 2px solid red;
+.wrap .col .angeed #slide_1_0{
+	background-image: url(res/screenshots/1.png);
 }
 
+.wrap .col .angeed #slide_1_1{
+	background-image: url(res/screenshots/2.png);
+}
 
-@media screen and (min-width: 500px) {
+.wrap .col .angeed #slide_1_2{
+	background-image: url(res/screenshots/3.png);
+}
 
+.wrap .col .angeed #slide_2_0{
+	background-image: url(res/screenshots/h1.png);
+}
+
+.wrap .col .angeed #slide_2_1{
+	background-image: url(res/screenshots/h2.png);
+}
+
+.wrap .col .angeed #slide_2_2{
+	background-image: url(res/screenshots/h3.png);
+}
+
+.wrap .col .angeed .control{
+	width: 50%;
+	height: 500px;
+	text-align: center;
+	font-size: 200px;
+	line-height: 500px;
+	color: rgba(255, 255, 255, 0.2);
+	-webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
+
+.wrap .col .angeed .slide p{
+	position: absolute;
+	bottom: 0;
+	font-size: 40px;
+	color: black;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.wrap .col .angeed .slide .small{
+	font-size: 30px;
+	vertical-align: middle;
+	line-height: 40px;
+}
+
+.wrap .col .angeed .slide .any{
+	line-height: 30px;
+}
+
+@media screen and (min-width: 900px) {
+	.wrap {
+		position: absolute;
+		perspective: 1000px;
+		transform-style: preserve-3d;
+
+		max-width: 1600px;
+		max-height: 700px;
+		left: 0;
+		right: 0;
+		top:50px;
+		bottom: 0;
+		margin: auto;
+	}
+	.wrap .to_absolute{
+		position: absolute;
+		top:0;
+		left: 0;
+		transform: rotateY(25deg);
+	}
+	.wrap .to_absolute:nth-child(2){
+		left: auto;
+		right: 0;
+		transform: rotateY(-25deg);
+	}
 }
 
 @keyframes pulse{
