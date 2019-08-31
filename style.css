@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+
 *{
 	margin:0;
 	padding:0;
@@ -9,7 +10,6 @@
 
 body{
 	background-image: url('res/noize.gif');
-	
 }
 
 body::before{
@@ -46,19 +46,21 @@ body::before{
 .wrap .col .title{
 	width: 100%;
 	text-align: center;
-	font-size: 30px;
+	font-size: 25px;
 	color: white;
 }
 
 .wrap .col .button{
 	width: 120px;
-	padding: 10px 5px;
+	padding: 6px 5px;
 	margin: 10px auto;
 	display: block;
 	text-align: center;
 	font-size: 25px;
 	color: black;
 	background: #c70600;
+	border-top: 2px solid #c70600;
+	border-bottom: 2px solid #6d0400;
 }
 
 .wrap .col .logo::before{
@@ -155,7 +157,7 @@ body::before{
 		max-height: 700px;
 		left: 0;
 		right: 0;
-		top:50px;
+		top:20px;
 		bottom: 0;
 		margin: auto;
 	}
@@ -172,6 +174,14 @@ body::before{
 	}
 	.wrap .main{
 		max-width: 320px;
+	}
+	.wrap .col .button:hover{
+		border-bottom: none;
+		margin-top: 12px;
+	}
+	.wrap .col .angeed .control:hover{
+		color: rgba(255, 255, 255, 0.5);
+		-webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
 	}
 }
 
